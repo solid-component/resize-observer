@@ -60,8 +60,8 @@ const SingleObserver = (props: ParentProps<SingleObserverProps>) => {
   };
 
   createEffect(() => {
-    if (props.disabled) {
-      unobserve(resolved() as HTMLElement, onInternalResize);
+    if (!props.disabled) {
+      observe(resolved() as HTMLElement, onInternalResize);
     }
     onCleanup(() => {
       unobserve(resolved() as HTMLElement, onInternalResize);

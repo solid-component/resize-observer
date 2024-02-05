@@ -5,7 +5,6 @@ import {
   splitProps,
 } from "solid-js";
 import SingleObserver from "./SingleObserver";
-
 export interface SizeInfo {
   width: number;
   height: number;
@@ -34,5 +33,7 @@ const ResizeObserver = (p: ParentProps<ResizeObserverProps>) => {
     </For>
   );
 };
+
+export * from './Collection'
 
 export default ResizeObserver;
